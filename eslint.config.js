@@ -1,0 +1,36 @@
+export default [
+  {
+    files: ["src/**/*.js", "tests/**/*.js", "scripts/**/*.js"],
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: "module",
+      globals: {
+        window: "readonly",
+        document: "readonly",
+        navigator: "readonly",
+        localStorage: "readonly",
+        indexedDB: "readonly",
+        fetch: "readonly",
+        console: "readonly",
+        URL: "readonly",
+        URLSearchParams: "readonly",
+        CustomEvent: "readonly",
+        EventTarget: "readonly",
+        HTMLElement: "readonly",
+        SVGPathElement: "readonly",
+        customElements: "readonly",
+        setTimeout: "readonly",
+        clearTimeout: "readonly",
+        performance: "readonly",
+        structuredClone: "readonly",
+        process: "readonly",
+      },
+    },
+    rules: {
+      "no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
+      "no-var": "error",
+      "prefer-const": "error",
+      eqeqeq: ["error", "always"],
+    },
+  },
+];
